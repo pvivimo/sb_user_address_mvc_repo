@@ -20,11 +20,6 @@ public class AppController {
 		this.service = service;
 	}
 	
-	@GetMapping("/")
-	public String index() {
-		
-		return "index.html";
-	}
 	
 	@GetMapping("/user/{userid}")
 	public String showUser(

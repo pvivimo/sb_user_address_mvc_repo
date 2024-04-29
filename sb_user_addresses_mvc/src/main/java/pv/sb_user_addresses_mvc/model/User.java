@@ -1,5 +1,7 @@
 package pv.sb_user_addresses_mvc.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,6 +20,8 @@ public class User {
 	
 	@Column(name = "name")
 	private String name;
+	
+	private List<Address> address;
 
 	public int getId() {
 		return id;
@@ -35,12 +39,14 @@ public class User {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + "]";
+	public List<Address> getAddress() {
+		return address;
 	}
-	
-	
+
+	public void setAddress(List<Address> address) {
+		this.address = address;
+	}
+
 	
 
 }
